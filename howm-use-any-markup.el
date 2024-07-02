@@ -1,3 +1,7 @@
+;; commands to use howm with various markup major modes
+;; Copyright (C) 2024  "Artsiom Karakin" karakin2000@gmail.com
+;; See LICENSE.txt for license of this code
+
 (defun howm-org-mode ()
   "Set org as major and howm as minor mode for a file.
    Add first with file local variable specifying org as major mode"
