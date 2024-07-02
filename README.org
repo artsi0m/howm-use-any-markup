@@ -1,0 +1,12 @@
+** Howm use any markup
+
+In this repo
+I want to demonstrate how any markup can be used with
+hitori otegaru wiki modoki emacs minor mode and also create commands
+that will change emacs major mode in buffer
+and add file local variables to set this mode automatically.
+
+
+*** todos
+
+**** TODO Make idempotent version of function that adds file local variable

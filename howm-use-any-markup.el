@@ -1,0 +1,31 @@
+(defun howm-org-mode ()
+  "Set org as major and howm as minor mode for a file.
+   Add first with file local variable specifying org as major mode"
+    (interactive)
+  (org-mode)
+  (howm-mode)
+  (add-file-local-variable-prop-line 'mode 'org))
+
+(defun howm-markdown-mode ()
+  "Set markdown as major and howm as minor mode for a file.
+   Add first with file local variable specifying markdown as major mode"
+  (interactive)
+  (markdown-mode)
+  (howm-mode)
+  (add-file-local-variable-prop-line 'mode 'markdown))
+
+(defun howm-rst-mode ()
+  "Set rst as major and howm as minor mode for a file.
+   Add first with file local variable specifying rst as major mode"
+  (interactive)
+  (rst-mode)
+  (howm-mode)
+  (add-file-local-variable-prop-line 'mode 'rst))
+
+(defun howm-adoc-mode ()
+  "Set adoc as major and howm as minor mode for a file.
+   Add first with file local variable specifying adoc as major mode"
+  (interactive)
+  (adoc-mode)
+  (howm-mode)
+  (add-file-local-variable-prop-line 'mode 'adoc))
