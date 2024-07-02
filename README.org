@@ -10,3 +10,8 @@ and add file local variables to set this mode automatically.
 *** todos
 
 **** TODO Make idempotent version of function that adds file local variable
+
+**** TODO Create a macros, so that I wouldn't need to write seven simillar functions
+
+**** TODO Maybe, use this macros to use any major mode possible, without adding it into package
+
