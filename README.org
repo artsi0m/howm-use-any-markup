@@ -9,7 +9,22 @@ and add file local variables to set this mode automatically.
 
 *** todos
 
-**** TODO Make idempotent version of function that adds file local variable
+**** Make idempotent version of function that adds file local variable
+
+It is kinda done.
+If mode is already defined my functions wouldn't
+add prop-lines with the same mode.
+
+However situation is different if it is other mode.
+
+It seems that functions was designed like this specifically.
+
+Excerpt from the man:
+
+/This command deletes all existing settings of VARIABLE (except ‘mode’/
+/and ‘eval’) and adds a new file-local VARIABLE with VALUE to/
+/the -*- line./
+
 
 **** TODO Create a macros, so that I wouldn't need to write seven simillar functions
 
