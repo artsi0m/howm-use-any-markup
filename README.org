@@ -2,7 +2,7 @@
 
 In this repo
 I want to demonstrate how any markup can be used with
-hitori otegaru wiki modoki emacs minor mode and also create commands
+hitori otegaru wiki modoki emacs minor mode and also create command
 that will change emacs major mode in buffer
 and add file local variables to set this mode automatically.
 
@@ -26,7 +26,6 @@ Excerpt from the man:
 /the -*- line./
 
 
-**** TODO Create a macros, so that I wouldn't need to write seven simillar functions
-
-**** TODO Maybe, use this macros to use any major mode possible, without adding it into package
-
+**** DONE Create a macros, so that I wouldn't need to write seven simillar functions
+**** DONE Maybe, use this macros to use any major mode possible, without adding it into package
+Done without macros, but with =intern=, =intern-soft= and =funcall=
