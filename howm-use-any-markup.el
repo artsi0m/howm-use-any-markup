@@ -1,7 +1,22 @@
-;; commands to use howm with various markup major modes
+;; Commands to use howm with various markup major modes
 ;; Copyright (C) 2024  "Artsiom Karakin" karakin2000@gmail.com
 ;; See LICENSE.txt for license of this code
 
+(defun howm-set-major-mode ()
+  "Choose mode and set it as major and howm as minor mode for a file.
+   Add first with file local variable specifying org as major mode"
+    (interactive)
+    (howm-mode)
+    (let*
+	((modes-list (mapcar #'cdr auto-mode-alist))
+	 (curr-mode (completing-read "Choose major mode: " modes-list))
+	 (curr (string-trim-right curr-mode "-mode")))
+      (unless (eq major-mode 'curr-mode)
+	(funcall (intern curr-mode))
+	(howm-mode)
+	(add-file-local-variable-prop-line
+	 'mode curr))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun howm-set-org-mode ()
   "Set org as major and howm as minor mode for a file.
    Add first with file local variable specifying org as major mode"
