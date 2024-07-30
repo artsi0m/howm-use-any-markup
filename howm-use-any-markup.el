@@ -8,14 +8,15 @@
     (interactive)
     (howm-mode)
     (let*
-	((modes-list (mapcar #'cdr auto-mode-alist))
-	 (curr-mode (completing-read "Choose major mode: " modes-list))
-	 (curr (string-trim-right curr-mode "-mode")))
-      (unless (eq major-mode 'curr-mode)
-	(funcall (intern curr-mode))
+	((modes (mapcar #'cdr auto-mode-alist))
+	 (mode-name (completing-read "Choose major mode: " modes))
+	 (mode (intern-soft mode-name)))
+      (unless (or (null mode)
+	  (eq mode major-mode))
+	(funcall mode)
 	(howm-mode)
 	(add-file-local-variable-prop-line
-	 'mode curr))))
+	 'mode (intern (string-trim-right mode-name "-mode\\'"))))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun howm-set-org-mode ()
   "Set org as major and howm as minor mode for a file.
