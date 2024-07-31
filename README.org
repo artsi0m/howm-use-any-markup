@@ -4,28 +4,7 @@ In this repo
 I want to demonstrate how any markup can be used with
 hitori otegaru wiki modoki emacs minor mode and also create command
 that will change emacs major mode in buffer
-and add file local variables to set this mode automatically.
+and add file local variables to set selected major mode automatically
+on the next occurence of opening that file.
 
 
-*** todos
-
-**** Make idempotent version of function that adds file local variable
-
-It is kinda done.
-If mode is already defined my functions wouldn't
-add prop-lines with the same mode.
-
-However situation is different if it is other mode.
-
-It seems that functions was designed like this specifically.
-
-Excerpt from the man:
-
-/This command deletes all existing settings of VARIABLE (except ‘mode’/
-/and ‘eval’) and adds a new file-local VARIABLE with VALUE to/
-/the -*- line./
-
-
-**** DONE Create a macros, so that I wouldn't need to write seven simillar functions
-**** DONE Maybe, use this macros to use any major mode possible, without adding it into package
-Done without macros, but with =intern=, =intern-soft= and =funcall=
