@@ -4,7 +4,8 @@
 
 (defun howm-set-major-mode ()
   "Choose mode and set it as major and howm as minor mode for a file.
-   Add first with file local variable specifying org as major mode"
+   Add first line with file local variable specifying selected mode
+   as major mode"
     (interactive)
     (howm-mode)
     (let*
