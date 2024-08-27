@@ -4,7 +4,7 @@
 ;; Copyright (C) 2024  "Artsiom Karakin" karakin2000@gmail.com
 ;; See LICENSE.txt for license of this code
 
-(defun howm-set-major-mode ()
+(defun howm-insert-prop-line ()
 "Activate major mode and modify the file so that this mode is activated
 automatically the next time it is opened"
     (interactive)
