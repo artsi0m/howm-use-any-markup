@@ -4,7 +4,7 @@
 
 ;; Author: Artsiom Karakin <karakin2000@gmail.com>
 ;; Created: 2024-08-02
-;; Version: 0.1.1
+;; Version: 0.1.2
 ;; Package-Requires: ((emacs "23.2") (howm "1.22"))
 ;; Keywords: wiki
 ;; URL: https://github.com/artsi0m/howm-use-any-markup
@@ -34,6 +34,7 @@
 
 (require 'howm)
 
+;;;###autoload
 (defun howm-insert-prop-line (&optional mode)
   "Enable & save major mode to prop-line to use with howm in the file
   local variable"
