@@ -4,7 +4,7 @@
 
 ;; Author: Artsiom Karakin <karakin2000@gmail.com>
 ;; Created: 2024-08-02
-;; Version: 0.1.5
+;; Version: 0.1.6
 ;; Package-Requires: ((emacs "24.4") (howm "1.22"))
 ;; Keywords: convenience wiki
 ;; URL: https://github.com/artsi0m/howm-use-any-markup
@@ -38,8 +38,8 @@
 ;;;###autoload
 (defun howm-insert-prop-line (&optional mode)
   "Enable & save major MODE to the -*- line to use it with howm.
-Either \[command] howm-insert-prop-line or
-`(howm-insert-prop-line \='example-major-mode) to call it."
+Either \[howm-insert-prop-line] as a command or
+\(howm-insert-prop-line \\='example-major-mode) to call it."
   (interactive (list (intern
                       (completing-read "Choose major mode: "
                                        (mapcar #'cdr auto-mode-alist)
