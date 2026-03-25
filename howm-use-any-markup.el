@@ -4,9 +4,9 @@
 
 ;; Author: Artsiom Karakin <karakin2000@gmail.com>
 ;; Created: 2024-08-02
-;; Version: 0.1.3
-;; Package-Requires: ((emacs "23.2") (howm "1.22"))
-;; Keywords: wiki
+;; Version: 0.1.4
+;; Package-Requires: ((emacs "24.4") (howm "1.22"))
+;; Keywords: convenience wiki
 ;; URL: https://github.com/artsi0m/howm-use-any-markup
 
 ;;; This file is not part of GNU Emacs.
@@ -28,17 +28,18 @@
 
 ;; This package provides command howm-insert-prop-line, that inserts
 ;; prop-line file local variable of selected major mode into first line
-;; of the file and than enables howm minor mode. Next time this file
-;; opened emacs will automatically set specified major mode.  It may gain
+;; of the file and than enables howm minor mode.  Next time this file
+;; opened Emacs will automatically set specified major mode.  It may gain
 ;; more functionality in the future.
 
-(require 'howm)
+;;; Code:
+(require 'howm-mode)
 
 ;;;###autoload
 (defun howm-insert-prop-line (&optional mode)
-  "Enable & save major mode to the -*- line to use it with howm.
-Either M-x howm-insert-prop-line or
-(howm-insert-prop-line 'example-major-mode) to call it."
+  "Enable & save major MODE to the -*- line to use it with howm.
+Either \[howm-insert-prop-line] or
+`(howm-insert-prop-line 'example-major-mode) to call it."
   (interactive (list (intern
                       (completing-read "Choose major mode: "
                                        (mapcar #'cdr auto-mode-alist)
@@ -50,3 +51,4 @@ Either M-x howm-insert-prop-line or
 ;; programmatically:  (howm-insert-prop-line 'c-mode)
 
 (provide 'howm-use-any-markup)
+;;; howm-use-any-markup.el ends here
