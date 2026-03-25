@@ -4,7 +4,7 @@
 
 ;; Author: Artsiom Karakin <karakin2000@gmail.com>
 ;; Created: 2024-08-02
-;; Version: 0.1.6
+;; Version: 0.1.7
 ;; Package-Requires: ((emacs "24.4") (howm "1.22"))
 ;; Keywords: convenience hypermedia outlines
 ;; URL: https://github.com/artsi0m/howm-use-any-markup
@@ -38,7 +38,7 @@
 ;;;###autoload
 (defun howm-insert-prop-line (&optional mode)
   "Enable & save major MODE to the -*- line to use it with howm.
-Either \[howm-insert-prop-line] as a command or
+Either \\[execute-extended-command] howm-insert-prop-line as a command or
 \(howm-insert-prop-line \\='example-major-mode) to call it."
   (interactive (list (intern
                       (completing-read "Choose major mode: "
