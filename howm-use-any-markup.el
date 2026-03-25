@@ -4,7 +4,7 @@
 
 ;; Author: Artsiom Karakin <karakin2000@gmail.com>
 ;; Created: 2024-08-02
-;; Version: 0.1.4
+;; Version: 0.1.5
 ;; Package-Requires: ((emacs "24.4") (howm "1.22"))
 ;; Keywords: convenience wiki
 ;; URL: https://github.com/artsi0m/howm-use-any-markup
