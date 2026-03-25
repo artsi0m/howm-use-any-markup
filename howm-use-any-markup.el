@@ -6,7 +6,7 @@
 ;; Created: 2024-08-02
 ;; Version: 0.1.6
 ;; Package-Requires: ((emacs "24.4") (howm "1.22"))
-;; Keywords: convenience wiki
+;; Keywords: convenience hypermedia outlines
 ;; URL: https://github.com/artsi0m/howm-use-any-markup
 
 ;;; This file is not part of GNU Emacs.
