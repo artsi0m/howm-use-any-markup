@@ -4,7 +4,7 @@
 
 ;; Author: Artsiom Karakin <karakin2000@gmail.com>
 ;; Created: 2024-08-02
-;; Version: 0.1.2
+;; Version: 0.1.3
 ;; Package-Requires: ((emacs "23.2") (howm "1.22"))
 ;; Keywords: wiki
 ;; URL: https://github.com/artsi0m/howm-use-any-markup
@@ -36,8 +36,9 @@
 
 ;;;###autoload
 (defun howm-insert-prop-line (&optional mode)
-  "Enable & save major mode to prop-line to use with howm in the file
-  local variable"
+  "Enable & save major mode to the -*- line to use it with howm.
+Either M-x howm-insert-prop-line or
+(howm-insert-prop-line 'example-major-mode) to call it."
   (interactive (list (intern
                       (completing-read "Choose major mode: "
                                        (mapcar #'cdr auto-mode-alist)
@@ -47,3 +48,5 @@
   (add-file-local-variable-prop-line
    'mode (intern (string-trim-right (symbol-name mode) "-mode"))))
 ;; programmatically:  (howm-insert-prop-line 'c-mode)
+
+(provide 'howm-use-any-markup)
