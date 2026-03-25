@@ -38,8 +38,8 @@
 ;;;###autoload
 (defun howm-insert-prop-line (&optional mode)
   "Enable & save major MODE to the -*- line to use it with howm.
-Either \[howm-insert-prop-line] or
-`(howm-insert-prop-line 'example-major-mode) to call it."
+Either \[command] howm-insert-prop-line or
+`(howm-insert-prop-line \='example-major-mode) to call it."
   (interactive (list (intern
                       (completing-read "Choose major mode: "
                                        (mapcar #'cdr auto-mode-alist)
