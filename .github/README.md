@@ -5,8 +5,8 @@ It may gain more functionality in the future.
 
 ## howm-insert-prop-line
 
-Command that will change emacs major mode in a buffer and add file local
-variable (prop-line) to set selected major mode automatically on the next
+Change emacs major mode in a buffer and add file local variable
+(prop-line) to set selected major mode automatically on the next
 occurence of opening that file.
 
 <img width="718" height="711" alt="Annotated GNU Emacs scrennshot demonstrating multiple markups i.e. org-mode, markdown used 
