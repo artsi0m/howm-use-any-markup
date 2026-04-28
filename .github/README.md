@@ -1,11 +1,11 @@
 # Howm use any markup
 
-In this repo I want to demonstrate how any markup can be used with hitori-otegaru-wiki-modoki emacs minor mode.  
+In this repo I want to demonstrate how any markup can be used with hitori-otegaru-wiki-modoki emacs minor mode.
 It may gain more functionality in the future.
 
 ## howm-insert-prop-line
 
-Command that will change emacs major mode in buffer and add file local
+Command that will change emacs major mode in a buffer and add file local
 variable (prop-line) to set selected major mode automatically on the next
 occurence of opening that file.
 
