@@ -1,5 +1,4 @@
 # Howm use any markup
-
 This package provides command howm-insert-prop-line, that inserts
 prop-line file local variable of selected major mode into first line
 of the file and than enables howm minor mode. It may gain more
@@ -12,8 +11,3 @@ variables to set selected major mode automatically on the next
 occurence of opening that file.
 
 
-## Demo screencast
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dXxY06womN8" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
