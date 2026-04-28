@@ -1,3 +1,10 @@
-* Howm use any markup
+HOWM USE ANY MARKUP
 
-Short README to view from Emacs itself
+howm-insert-prop-line
+
+Enable & save major mode to the -*- line (prop-line) to use it with
+howm.  Either howm-insert-prop-line as a command or
+(howm-insert-prop-line 'example-major-mode) to call it non
+interactively.
+
+
