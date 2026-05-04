@@ -29,7 +29,7 @@
 ;; This package provides command howm-insert-prop-line, that inserts
 ;; prop-line file local variable of selected major mode into first line
 ;; of the file and than enables howm minor mode.  Next time this file
-;; opened Emacs will automatically set specified major mode.  It may gain
+;; opened in Emacs will automatically set specified major mode.  It may gain
 ;; more functionality in the future.
 
 ;;; Code:
