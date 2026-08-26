@@ -4,7 +4,7 @@
 
 ;; Author: Artsiom Karakin <karakin2000@gmail.com>
 ;; Created: 2024-08-02
-;; Version: 1.0.0
+;; Version: 1.0.1
 ;; Package-Requires: ((emacs "24.4") (howm "1.22"))
 ;; Keywords: convenience hypermedia outlines
 ;; URL: https://github.com/artsi0m/howm-use-any-markup
@@ -46,7 +46,21 @@
   (howm-mode)
   (add-file-local-variable-prop-line
    'mode (intern (string-trim-right (symbol-name mode) "-mode"))))
-;; programmatically:  (howm-insert-prop-line 'c-mode)
+;; programmatically:  (howm-insert-prop-line 'sample-major-mode)
+
+;;;###autoload
+(defun howm-insert-local-var (&optional mode)
+  "Enable & save major MODE to the -*- line to use it with howm."
+  (interactive (list (intern
+                      (completing-read "Choose major mode: "
+                                       (mapcar #'cdr auto-mode-alist)
+                                       nil t))))
+  (funcall mode)
+  (howm-mode)
+  (add-file-local-variable
+   'mode (intern (string-trim-right (symbol-name mode) "-mode"))))
+;; programmatically:  (howm-insert-local-var 'sample-major-mode)
+
 
 (provide 'howm-use-any-markup)
 ;;; howm-use-any-markup.el ends here
